@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { Input, Button, Title, Description } from "../../components";
 import { Authentication } from "../../layouts";
-
-import { COLOR } from "../../constants";
-import { User, Key } from "../../icons";
+import { Key } from "../../icons";
 export function ChangePassword({ navigation }) {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const handleConfirm = () => {
-        console.log(username);
         console.log(password);
+        console.log(confirmPassword);
+        navigation.navigate("Login");
     }
     const handleRegister = () => {
-        navigation.navigate("Register")
+        navigation.navigate("Register");
     }
     const handleLogin = () => {
-        navigation.navigate("Login")
+        navigation.navigate("Login");
     }
     return (
         <Authentication>
@@ -31,10 +30,6 @@ export function ChangePassword({ navigation }) {
                 <Description style={styles.textCenter}>Bạn muốn đăng ký tài khoản mới?</Description>
                 <Button style={styles.btnConfirm} onPress={handleRegister} >Đăng ký</Button>
             </View>
-
-
-
-
         </Authentication>
     )
 }

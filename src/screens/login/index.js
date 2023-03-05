@@ -11,9 +11,13 @@ export function Login({ navigation }) {
     const handleLogin = () => {
         console.log(username);
         console.log(password);
+        console.log("HomePage");
     }
     const handleRegister = () => {
         navigation.navigate("Register")
+    }
+    const handleForgotPassword = () => {
+        navigation.navigate("ForgotPassword");
     }
     return (
         <Authentication>
@@ -26,7 +30,7 @@ export function Login({ navigation }) {
                 <View>
                     <Text>Giữ đăng nhập</Text>
                 </View>
-                <Pressable>
+                <Pressable onPress={handleForgotPassword}>
                     <Text style={styles.forgotPassword}>Quên mật khẩu?</Text>
                 </Pressable>
             </View>

@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 export function Navigation() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="ChangePassword" screenOptions={{ headerShown: false, contentStyle: { backgroundColor:'#FFFFFF'} }}>
+            <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false, contentStyle: { backgroundColor:'#FFFFFF'} }}>
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Register" component={Register} />
                 <Stack.Screen name="ChangePassword" component={ChangePassword} />

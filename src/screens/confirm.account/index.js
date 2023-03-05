@@ -6,7 +6,8 @@ import { User, Key } from "../../icons";
 export function ConfirmAccount({ navigation }) {
     const [code, setCode] = useState('');
     const handleConfirmAccount = () => {
-        console.log(password);
+        console.log(code);
+        navigation.navigate("ChangePassword")
     }
     const handleRegister = () => {
         navigation.navigate("Register")
@@ -22,9 +23,9 @@ export function ConfirmAccount({ navigation }) {
             <Button onPress={handleConfirmAccount} style={styles.btnConfirm} dark>Xác nhận</Button>
             <View style={styles.container}>
                 <Description style={styles.textCenter}>Bạn muốn đăng nhập lại?</Description>
-                <Button style={styles.btnConfirm} onPress={handleLogin}>Đăng nhập</Button>
+                <Button style={styles.btnSign} onPress={handleLogin}>Đăng nhập</Button>
                 <Description style={styles.textCenter}>Bạn muốn đăng ký tài khoản mới?</Description>
-                <Button style={styles.btnConfirm} onPress={handleRegister} >Đăng ký</Button>
+                <Button style={styles.btnSign} onPress={handleRegister} >Đăng ký</Button>
             </View>
         </Authentication>
     )
@@ -32,12 +33,15 @@ export function ConfirmAccount({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 30,
+        marginTop: 80,
     },
     code: {
-        marginTop: 10,
+        marginTop: 20,
     },
     btnConfirm: {
+        marginTop: 15,
+    },
+    btnSign: {
         marginTop: 6,
     },
     textCenter: {
