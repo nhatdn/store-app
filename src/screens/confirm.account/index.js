@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet, SafeAreaView } from "react-native";
 import { Input, Button, Title, Description } from "../../components";
 import { Authentication } from "../../layouts";
 import { User, Key } from "../../icons";
@@ -17,7 +17,9 @@ export function ConfirmAccount({ navigation }) {
     }
     return (
         <Authentication>
-            <Title>Nhập mã xác thực</Title>
+            <SafeAreaView style={{height: 30}}>
+                <Title>Nhập mã xác thực</Title>
+            </SafeAreaView>
             <Description>Chúng tôi đã gửi mã xác thực đến email của bạn, vui lòng kiểm tra hộp thư và nhập mã xác thực</Description>
             <Input onChangeText={setCode} icon={<Key/>} style={styles.code} placeholder="123456" secureTextEntry></Input>
             <Button onPress={handleConfirmAccount} style={styles.btnConfirm} dark>Xác nhận</Button>

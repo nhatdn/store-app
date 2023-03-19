@@ -5,13 +5,12 @@ import { Authentication } from "../../layouts";
 
 import { COLOR } from "../../constants";
 import { User, Key } from "../../icons";
+import { SafeAreaView } from "react-native";
 export function Login({ navigation }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const handleLogin = () => {
-        console.log(username);
-        console.log(password);
-        console.log("HomePage");
+        navigation.navigate("Home");
     }
     const handleRegister = () => {
         navigation.navigate("Register")
@@ -21,7 +20,9 @@ export function Login({ navigation }) {
     }
     return (
         <Authentication>
-            <Title>Chào mừng bạn trở lại</Title>
+            <SafeAreaView style={{height: 30}}>
+                <Title>Chào mừng bạn trở lại</Title>
+            </SafeAreaView>
             <Description>Vui lòng nhập tên người dùng và mật khẩu để tiếp tục!</Description>
             <Input onChangeText={setUsername} style={{marginTop: 25}} icon={<User/>} placeholder="Username"/>
             <Input onChangeText={setPassword} style={{marginTop: 10}} icon={<Key/>} secureTextEntry placeholder="Password"/>

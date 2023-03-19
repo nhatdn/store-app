@@ -10,8 +10,14 @@ const COLOR = {
     ACCENT: "#C29C1D",
     GREEN: "#84CA93",
     PURPLE: "#A183E0",
-    YELLOW: "FFA902",
-    PRIMARY_LIGHT: "C8EDD9",
+    YELLOW: "#FFA902",
+    PRIMARY_LIGHT: "#C8EDD9",
+    ORANGE: '#FFA31A',
+    GREEN: '#027335',
+    GREEN_DARK: "#0A3C48",
+    RED: "#E42B2B",
+    ORANGE_LIGHT: "#FFEECC",
+    GREEN_LIGHT: "#C8EDD9",
 }
 export {
     COLOR

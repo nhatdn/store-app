@@ -5,3 +5,7 @@ export { Header } from "./header";
 export { Container } from "./container";
 export { Title } from "./title";
 export { Description } from "./description";
+export { Label } from "./label";
+export { KeyboardAvoidingView } from "./keyboard.avoiding.view"
+export { Product } from "./product"
+export { CartItem } from "./cart.item"

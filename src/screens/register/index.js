@@ -4,21 +4,22 @@ import { Input, Button, Title, Description } from "../../components";
 import { Authentication } from "../../layouts";
 import { User, Key, Mail } from "../../icons";
 import { COLOR } from "../../constants";
+import { SafeAreaView } from "react-native";
 export function Register({ navigation }) {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const handleRegister = () => {
-        console.log(username);
-        console.log(email);
-        console.log(password);
+        navigation.navigate("Login");
     }
     const handleLogin = () => {
         navigation.navigate("Login");
     }
     return (
         <Authentication>
-            <Title>Tạo tài khoản mới</Title>
+            <SafeAreaView style={{height: 30}}>
+                <Title>Tạo tài khoản mới</Title>
+            </SafeAreaView>
             <Description>Vui lòng nhập tên của bạn, email và mật khẩu để tạo tài khoản mới!</Description>
             <Input onChangeText={setUsername} style={styles.username} icon={<User/>} placeholder="Username"/>
             <Input onChangeText={setEmail} style={styles.email} icon={<Mail/>} placeholder="Email"/>
